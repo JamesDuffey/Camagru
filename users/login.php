@@ -28,6 +28,11 @@ include("../config/dbcon.php");
                            <input type="submit" name="login" id="log_but" value="Login"/>
                         </div>
                     </form>
+                    <?php
+					if (isset($_POST['login'])) {
+						log_in();
+					}
+				    ?>
                 </div>
             </div>
     </section>
