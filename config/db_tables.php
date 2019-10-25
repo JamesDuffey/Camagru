@@ -1,5 +1,5 @@
 <?PHP
-include 'db_con.php';
+include 'db.php';
 
 $table = "users";
 
@@ -9,9 +9,9 @@ try {
         
         $sql = "CREATE TABLE IF NOT EXISTS $table(
             `user_id` INT(100) AUTO_INCREMENT PRIMARY KEY,
+            `name` VARCHAR(255) NOT NULL,
+            `surname` VARCHAR(255) NOT NULL,
             `username` VARCHAR(255) NOT NULL,
-            `userpass` VARCHAR(255) NOT NULL,
-            `email` VARCHAR(255) NOT NULL,
             `email` VARCHAR(255) NOT NULL,
             `userpass` VARCHAR(255) NOT NULL,
             `user_image` VARCHAR(255),
