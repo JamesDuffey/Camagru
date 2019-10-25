@@ -8,7 +8,7 @@ include("dbcon.php");
     <title>Camagru</title>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<body background="dark-honeycomb.png">
+<body background="background/dark-honeycomb.png">
      <header><h1><a href="index.php">Camagru</a><h1>
          <div><a style="float:right;"href="users/register.php">Register</a></div>
      </header>
