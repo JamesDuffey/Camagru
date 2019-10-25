@@ -1,5 +1,6 @@
 <?php
 include 'db_con.php';
+
 try {
 	$dbh = new PDO($dsn, $db_user, $db_pass);
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
