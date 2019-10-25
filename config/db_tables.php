@@ -1,7 +1,10 @@
 <?PHP
 include 'db_con.php';
+
+$table = "users";
+
 try {
-        $con = new PDO($dsn.";dbname=".$db, $username, $passwd);
+        $con = new PDO($dsn.";dbname=".$db_name, $db_user, $db_pass);
 	    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
         $sql = "CREATE TABLE IF NOT EXISTS $table(
