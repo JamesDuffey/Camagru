@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <?php
-include("dbcon.php");
+include("config/dbcon.php");
 ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Camagru</title>
+    <title>Camagru - Home</title>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body background="background/dark-honeycomb.png">

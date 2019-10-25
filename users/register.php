@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <?php
-include("dbcon.php");
+include("../config/dbcon.php");
 ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Camagru</title>
+    <title>Camagru - Register</title>
     <link rel="stylesheet" type="text/css" href="../index.css">
 </head>
 <body background="../background/dark-honeycomb.png">
@@ -15,7 +15,7 @@ include("dbcon.php");
     <section>
             <div class="reg">
                     
-                    <form name="register" action="index.php" method="post" enctype="multipart/form-data">
+                    <form name="register" action="register.php" method="post" enctype="multipart/form-data">
                         <h2 class="text">Name</h2>
                         <div class="form-group">
                             
