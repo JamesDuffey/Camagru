@@ -20,7 +20,7 @@ try {
             $con->exec($sql);
 
     } catch (PDOException $e) {
-        return " Tables Error:" . $e->getMessage();
+        return "Tables Error:" . $e->getMessage();
         die();
     }
     $con = null;

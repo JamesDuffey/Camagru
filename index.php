@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 include("config/dbcon.php");
+session_start();
 ?>
 <html lang="en">
 <head>
@@ -11,6 +12,7 @@ include("config/dbcon.php");
 <body background="background/dark-honeycomb.png">
      <header><h1><a href="index.php">Camagru</a><h1>
          <div><a style="float:right;"href="users/register.php">Register</a></div>
+         <div><a href='index.php?session_status=logout'>Log Out</a></div>
      </header>
     <section>
             <div class="reg">

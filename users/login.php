@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 include("../config/dbcon.php");
+session_start();
 ?>
 <html lang="en">
 <head>
@@ -14,10 +15,10 @@ include("../config/dbcon.php");
      </header>
     <section>
             <div class="reg">
-                    <form name="login" action="login.php" method="post" enctype="multipart/form-data">
-                        <h2 class="text">Email</h2>
+                    <form action="login.php" method="post">
+                        <h2 class="text">Username</h2>
                         <div class="form-group">
-                            <input size="25" type="text" name="email" class="form-control"/>
+                            <input size="25" type="text" name="username" class="form-control"/>
                         </div>
                         <h2 class="text">Password</h2>
                         <div class="form-group">
@@ -39,3 +40,9 @@ include("../config/dbcon.php");
  <footer></footer>
 </body>
 </html>
+<?PHP
+include("../functions/log_func.php");
+if (isset($_GET['session_status'])) {
+	log_out("index");
+}
+?>
