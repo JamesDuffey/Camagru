@@ -1,4 +1,4 @@
 <?php
-include 'config/make_db.php';
-include 'config/db_tables.php';
+include 'make_db.php';
+include 'db_tables.php';
 ?>

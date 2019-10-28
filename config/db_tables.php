@@ -1,5 +1,5 @@
 <?PHP
-include 'database.php';
+include 'dbcon.php';
 
 $table = "users";
 
@@ -17,6 +17,7 @@ try {
             `user_image` VARCHAR(255),
             `vkey` VARCHAR(255) NOT NULL,
             `verified` BIT default 0 NOT NULL)";
+            $con->exec($sql);
 
     } catch (PDOException $e) {
         return " Tables Error:" . $e->getMessage();
