@@ -1,10 +1,10 @@
 <?PHP
-include 'db.php';
+include 'database.php';
 
 $table = "users";
 
 try {
-        $con = new PDO($dsn.";dbname=".$db_name, $db_user, $db_pass);
+        $con = new PDO($db_dsn.";dbname=".$db_name, $db_user, $db_pass);
 	    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
         $sql = "CREATE TABLE IF NOT EXISTS $table(
@@ -19,7 +19,7 @@ try {
             `verified` BIT default 0 NOT NULL)";
 
     } catch (PDOException $e) {
-        return "Error!: " . $e->getMessage();
+        return " Tables Error:" . $e->getMessage();
         die();
     }
     $con = null;
