@@ -31,6 +31,7 @@ session_start();
                     </form>
                     <?php
 					if (isset($_POST['login'])) {
+                        include("../functions/log_func.php");
 						log_in();
 					}
 				    ?>
@@ -41,7 +42,6 @@ session_start();
 </body>
 </html>
 <?PHP
-include("../functions/log_func.php");
 if (isset($_GET['session_status'])) {
 	log_out("index");
 }

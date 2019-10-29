@@ -20,7 +20,7 @@ session_start();
                         <h2 class="text">Name</h2>
                         <div class="form-group">
                             
-                                <input type="text" name="Name" class="form-control"/>
+                                <input type="text" name="names" class="form-control"/>
                             </div>
                             <h2 class="text">Surname</h2>
                             <div class="form-group">
@@ -45,25 +45,16 @@ session_start();
                            <input type="submit" name="register" id="log_but" value="Register"/>
                         </div>
                     </form>
+                    <?php
+                        if(isset($_POST['register'])) {
+                        include '../functions/reg_func.php';
+                        register();
+    
+                     }
+                    ?>
                 </div>
             </div>
     </section>
  <footer></footer>
 </body>
 </html>
-
-<?php
-include '../functions/reg_func.php';
-    if(isset($_POST['register'])) {
-        global $con;
-        $u_name = $_POST['name'];
-        $u_surname = $_POST['surname'];
-        $u_uname = $_POST['username'];
-        $u_email = $_POST['email'];
-        $u_pass = hash('whirlpool', $_POST['userpass']);
-        
-        $sql = "INSERT INTO users (`name`, `surname`, `username`, `email`, `userpass`) values ('$u_name', '$u_surname', '$u_uname', '$u_email', '$u_pass')";
-        $con->exec($sql);
-    
-    }
-?>
