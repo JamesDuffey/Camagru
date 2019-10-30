@@ -1,5 +1,5 @@
 <?php
-include 'dbcon.php';
+include 'database.php';
 
 try {
 	$dbh = new PDO($db_dsn, $db_user, $db_pass);

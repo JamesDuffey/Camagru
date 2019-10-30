@@ -15,10 +15,10 @@ try {
             `email` VARCHAR(255) NOT NULL,
             `userpass` VARCHAR(255) NOT NULL,
             `user_image` VARCHAR(255),
-            `vkey` VARCHAR(255) NOT NULL,
+            `vkey` VARCHAR(255) NOT NULL, 
             `verified` BIT default 0 NOT NULL)";
             $con->exec($sql);
-
+//fix vkey cant be null
     } catch (PDOException $e) {
         return "Tables Error:" . $e->getMessage();
         die();
