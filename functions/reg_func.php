@@ -10,7 +10,7 @@
         $sql = ("INSERT INTO users (`name`, `surname`, `username`, `email`, `userpass`) values (:u_name,:u_surname,:u_uname,:u_email,:u_pass)");
         $reg_data = $con->prepare($sql);
         $reg_data->execute(array(':u_name'=>$u_name, ':u_surname'=>$u_surname, ':u_uname'=>$u_uname, ':u_email'=>$u_email, ':u_pass'=>$u_pass));
-       
+        mail($u_email, "pew", "pew", "pew");
         echo "<script>window.alert('Registered!')</script>";
     }
     $con = null;
