@@ -46,7 +46,7 @@ session_start();
                         </div>
                     </form>
                     <?php
-                        if(isset($_POST['register'])) {
+                        if (isset($_POST['register'])) {
                         include '../functions/reg_func.php';
                         register();
     

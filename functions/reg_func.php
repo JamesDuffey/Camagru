@@ -6,12 +6,11 @@
         $u_uname = $_POST['username'];
         $u_email = $_POST['email'];
         $u_pass = hash('whirlpool', $_POST['userpass']);
-
-        $sql = $con->prepare("INSERT INTO users ('name', surname, username, email, userpass) values (?,?,?,?,?)");
-        // $stmt = $con->prepare($sql);
-        $sql = $con->execute($u_name, $u_surname, $u_uname, $u_email, $u_pass);
-        
-        // if ($stmt);
+       
+        $sql = ("INSERT INTO users (`name`, `surname`, `username`, `email`, `userpass`) values (:u_name,:u_surname,:u_uname,:u_email,:u_pass)");
+        $reg_data = $con->prepare($sql);
+        $reg_data->execute(array(':u_name'=>$u_name, ':u_surname'=>$u_surname, ':u_uname'=>$u_uname, ':u_email'=>$u_email, ':u_pass'=>$u_pass));
+       
         echo "<script>window.alert('Registered!')</script>";
     }
     $con = null;
