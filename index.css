@@ -16,6 +16,16 @@ section div h1 {
     padding-top: 10%
 }
 
+.veriyf {
+    text-align: center;
+    padding-top: 10%
+}
+
+.verify p {
+    color: white;
+    font-size: 20;
+}
+
 .form-group {
     padding-top: 1%;
 }
