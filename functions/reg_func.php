@@ -26,7 +26,7 @@
             $reg_data->execute(array(':u_name'=>$u_name, ':u_surname'=>$u_surname, ':u_uname'=>$u_uname, ':u_email'=>$u_email, ':u_pass'=>$u_pass, ':vkey'=>$vkey));
             include 'email_verif.php';
             email_verif($u_email, $u_uname, $vkey);
-            echo "<script>window.alert('Registered!')</script>";
+            echo '<script>window.location.href="email_verifcation.php";</script>';
         }
         $con = null;
     }

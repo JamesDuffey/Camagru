@@ -11,6 +11,11 @@ section div h1 {
     font-size: 25px;;
 }
 
+.profile {
+    margin-top: 5%;
+    text-align:center;
+}
+
 .reg {
     text-align: center;
     padding-top: 10%
