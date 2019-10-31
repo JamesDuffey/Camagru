@@ -1,10 +1,10 @@
 <?PHP
-    function email_verif($u_email, $vkey) {
+    function email_verif($email, $user, $key) {
         $subject = "Activate your Camagru account.";
-	    $body = "Please click <a href='http://localhost:8080/Camagru/client/verify_email.php?ver_key=".$vkey."'>here</a> to activate your account.";
+	    $body = "Welcome ".$user."\n\nPlease click here to activate your account.\nhttp://localhost:8080/Camagru/users/verify_email.php?ver_key=".$key;
 	    $headers = "From: camagru@gmail.com\r\n";
 	    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-	    if (mail($u_email,$subject,$body,$headers))
+	    if (mail($email,$subject,$body," "))
 		    return true;
 	    else
 		    return false;

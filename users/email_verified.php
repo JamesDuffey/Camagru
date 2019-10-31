@@ -13,7 +13,7 @@ include("../config/dbcon.php");
      </header>
     <section>
             <div class="reg">
-                <p style="color:aqua; font-size:20px; margin-top: 10%">Please check your email for a verification link to activate your account!</p>
+                <p style="color:aqua; font-size:20px; margin-top: 10%">Your Account has been verified. You may now login!</p>
                 </div>
             </div>
     </section>

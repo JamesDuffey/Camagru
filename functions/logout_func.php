@@ -6,7 +6,7 @@ function log_out($page){
 			echo "<script>window.open('../index.php', '_self')</script>";
 		}
 		else if ($page == "index") {
-			echo "<script>window.open('./index.php', '_self')</script>";
+			echo "<script>window.open('../index.php', '_self')</script>";
 		}
 	}
 }
