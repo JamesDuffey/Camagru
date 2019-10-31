@@ -34,7 +34,7 @@ session_start();
                             </div>
                         <h2 class="text">Email</h2>
                         <div class="form-group">
-                            <input size="25" type="email" name="email" class="form-control"/>
+                            <input size="25" type="text" name="email" class="form-control"/>
                         </div>
                         <h2 class="text">Password</h2>
                         <div class="form-group">
@@ -49,11 +49,7 @@ session_start();
                         if (isset($_POST['register'])) {
                         include '../functions/reg_func.php';
                         register();
-<<<<<<< HEAD
                         echo '<script>window.location.href="login.php";</script>';
-    
-=======
->>>>>>> 99097efbdd439c374dcf4fb64817706419e91406
                      }
                     ?>
                 </div>
