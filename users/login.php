@@ -32,7 +32,8 @@ session_start();
                     <?php
 					if (isset($_POST['login'])) {
                         include("../functions/log_func.php");
-						log_in();
+                        log_in();
+                        echo "<script>window.location.replace('localhost:8080/Camagru/users/user_account.php')</script>";
 					}
 				    ?>
                 </div>

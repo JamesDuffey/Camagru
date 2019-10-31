@@ -1,9 +1,9 @@
 <?php
     function log_in() {
         include "../includes/connection.php";
-        $u_pass = 0;
         $u_username = $_POST['username'];
         $u_pass = hash('whirlpool', $_POST['password']);
+        echo $u_pass;
         $get_data = $con->prepare("SELECT * FROM users WHERE username=:username");
         $get_data->execute(['username' => $u_username]);
         $user_data = $get_data->fetch();

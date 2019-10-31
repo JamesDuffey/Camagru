@@ -49,6 +49,7 @@ session_start();
                         if (isset($_POST['register'])) {
                         include '../functions/reg_func.php';
                         register();
+                        echo '<script>window.location.href="login.php";</script>';
     
                      }
                     ?>
