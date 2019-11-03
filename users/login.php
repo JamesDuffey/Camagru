@@ -28,6 +28,9 @@ session_start();
                         <div class="form-group">
                            <input type="submit" name="login" id="log_but" value="Login"/>
                         </div>
+                        <div class="form-group">
+                        <a href="forgot_pass.php" style="background: transparent; color:aqua; border-color: aqua; font-size:17px; margin-top: 1%;">Forgot Password?</a>
+                        </div>
                     </form>
                     <?php
 					if (isset($_POST['login'])) {

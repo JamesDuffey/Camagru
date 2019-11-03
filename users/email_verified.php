@@ -14,6 +14,7 @@ session_start();
      </header>
     <section>
             <div class="reg">
+
                 <p style="color:aqua; font-size:20px; margin-top: 10%">Your Account has been verified. You may now login!</p>
                 </div>
             </div>

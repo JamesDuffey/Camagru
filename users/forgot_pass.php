@@ -20,19 +20,18 @@ session_start();
                         <div class="form-group">
                             <input size="25" type="text" name="email" class="form-control"/>
                         </div>
-                        <h2 class="text">Password</h2>
-                        <div class="form-group">
-                            
-                            <input type="password" name="password" class="form-control"/>
+                        <div class="form-pass">
+                            <br/>
+                           <input type="submit" name="forgot_pass" style="background: transparent; color:aqua; border-color: aqua; font-size:17px; margin-top: 1%;" value="Forgot Password"/>
                         </div>
                         <div class="form-group">
-                           <input type="submit" name="forgot_pass" id="log_but" value="Register"/>
+                            <a href="login.php" style="background: transparent; color:aqua; border-color: aqua; font-size:17px; margin-top: 1%;">Login</a>
                         </div>
                     </form>
                     <?php
                         if (isset($_POST['forgot_pass'])) {
                         include '../functions/forgot_pass_func.php';
-                        register();
+                        forgot_pass();
                         //echo '<script>window.location.href="email_verifcation.php";</script>';
                      }
                     ?>

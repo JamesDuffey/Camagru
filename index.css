@@ -12,8 +12,8 @@ section div h1 {
 }
 
 .profile {
-    margin-top: 5%;
-    text-align:center;
+    text-align: center;
+    padding-top: 5%;
 }
 
 .reg {
@@ -28,11 +28,15 @@ section div h1 {
 
 .verify p {
     color: white;
-    font-size: 20;
+    font-size: 20px;
 }
 
 .form-group {
     padding-top: 1%;
+}
+
+.form-pass {
+    padding-top: 3%;
 }
  
 .text {
@@ -57,6 +61,12 @@ section div h1 {
     color:aqua;
     width: 90px;
     height: 40px;
+    background: transparent;
+    border-color: aqua;
+}
+
+.forgot_but {
+    color:aqua;
     background: transparent;
     border-color: aqua;
 }

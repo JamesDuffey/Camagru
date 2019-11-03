@@ -15,19 +15,21 @@ session_start();
        <h1><a href="index.php">Camagru</a><h1>
          <ul style="list-style-type:none; margin: 0; display: inline; padding: 0;">
          <li style="display: inline; float: left;"><a style="float:right;"href="users/register.php" style="margin-left:20px;">Register</a></li>
-         <!-- <script> -->
-             <!-- if ($_SESSION) { -->
-                <li style="display: inline; float: left;"><a href='index.php?session_status=logout' style="margin-left:20px;">Log Out</a><li>
-             <!-- } -->
-         <!-- </script> -->
+             <?PHP
+             if (isset($_SESSION['user_id'])) {
+                echo '<li style="display: inline; float: left;"><a href="index.php?session_status=logout" style="margin-left:20px;">Log Out</a><li>';
+              }
+             ?>
         </ul>
      </header>
     <section>
             <div class="reg">
              <h1 style="color: aqua; font-size:40px;">Welcome To Camagru</h1>
-
-                <a href="users/login.php" id="login_but">Login</a>
-
+                <?PHP
+                if (!isset($_SESSION['user_id'])){
+                echo '<a href="users/login.php" id="login_but">Login</a>';
+                    }
+                ?>
                 </div>
     </section>
  <footer></footer>

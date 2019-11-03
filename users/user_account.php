@@ -15,7 +15,7 @@ session_start();
          <div><a style="float:left" href='../index.php?session_status=logout'>Log Out</a></div>
      </header>
     <section>
-            <div class="profile">
+            <div style="text-align: center;">
              <h1 style="color: aqua; font-size:40px;">User Account</h1>
             </div>
     </section>
