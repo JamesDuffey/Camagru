@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Camagru - Register</title>
+    <title>Camagru - Forgot Password</title>
     <link rel="stylesheet" type="text/css" href="../index.css">
 </head>
 <body background="../background/dark-honeycomb.png">

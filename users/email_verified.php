@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-    <title>Camagru - Login</title>
+    <title>Camagru - Verified</title>
     <link rel="stylesheet" type="text/css" href="../index.css">
 </head>
 <body background="../background/dark-honeycomb.png">
@@ -14,8 +14,10 @@ session_start();
      </header>
     <section>
             <div class="reg">
-
-                <p style="color:aqua; font-size:20px; margin-top: 10%">Your Account has been verified. You may now login!</p>
+            <?PHP
+            if (verify())
+            echo '<p style="color:aqua; font-size:20px; margin-top: 10%">Your Account has been verified. You may now login!</p>';
+            ?>
                 </div>
             </div>
     </section>

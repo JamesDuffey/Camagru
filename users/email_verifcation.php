@@ -5,7 +5,7 @@ include("../config/dbcon.php");
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-    <title>Camagru - Login</title>
+    <title>Camagru - Verification</title>
     <link rel="stylesheet" type="text/css" href="../index.css">
 </head>
 <body background="../background/dark-honeycomb.png">

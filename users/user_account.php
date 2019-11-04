@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Camagru - Home</title>
+    <title>Camagru - User Account</title>
     <link rel="stylesheet" type="text/css" href="../index.css">
 </head>
 <body background="../background/dark-honeycomb.png">
