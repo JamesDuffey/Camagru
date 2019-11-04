@@ -15,7 +15,7 @@ session_start();
     <section>
             <div class="reg">
                     
-                    <form name="register" action="forgot_pass.php" method="post" enctype="multipart/form-data">
+                    <form name="forgot_pass" action="forgot_pass.php" method="post" enctype="multipart/form-data">
                         <h2 class="text">Email</h2>
                         <div class="form-group">
                             <input size="25" type="text" name="email" class="form-control"/>

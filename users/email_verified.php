@@ -15,8 +15,8 @@ session_start();
     <section>
             <div class="reg">
             <?PHP
-            if (verify())
-            echo '<p style="color:aqua; font-size:20px; margin-top: 10%">Your Account has been verified. You may now login!</p>';
+            include '../functions/verified_func.php';
+            verify();
             ?>
                 </div>
             </div>

@@ -36,7 +36,7 @@ session_start();
 					if (isset($_POST['login'])) {
                         include("../functions/log_func.php");
                         log_in();
-                        echo "<script>window.location.replace('user_account.php')</script>";
+                        
 					}
 				    ?>
                 </div>

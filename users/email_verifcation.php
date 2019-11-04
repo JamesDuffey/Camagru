@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 include("../config/dbcon.php");
+session_start();
 ?>
 <html lang="en">
 <head>
