@@ -14,7 +14,7 @@ session_start();
      </header>
     <section>
     <div class="reg">
-                    <form action="reset_pass.php" method="post">
+                    <form action="" method="post">
                         <h2 class="text">Email</h2>
                         <div class="form-group">
                             <input size="25" type="text" name="email" class="form-control"/>
@@ -29,16 +29,17 @@ session_start();
                            <input type="submit" name="reset_pass" style="background: transparent; color:aqua; border-color: aqua; font-size:17px; margin-top: 1%;" value="Change Password"/>
                         </div>
                     </form>
-            <?php
-					if (isset($_POST['reset_pass'])) {
-                        include '../functions/reset_pass_func.php';
-                        $ver_key = $_GET['ver_key'];
-                        echo "<script>alert(".$ver_key.")</script>";
-                        $u_email = $_POST['email'];
-						$new_pass = hash('whirlpool', $_POST['new_pass']);
-						reset_pass($new_pass, $ver_key, $u_email);
-						}
-				?>
+                    <?php
+                    if (isset($_POST['reset_pass'])){
+                       include '../functions/reset_pass_func.php';
+                       include '../functions/validation.php';
+                       $ver_key = $_GET['ver_key'];
+                       $u_email = $_POST['email'];
+                       validate_password($_POST['new_pass']);
+                       $new_pass = hash('whirlpool', $_POST['new_pass']);
+                       reset_pass($new_pass, $ver_key, $u_email);
+					}
+				    ?>
                 </div>
             </div>
     </section>
