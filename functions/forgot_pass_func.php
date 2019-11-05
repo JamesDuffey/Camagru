@@ -5,6 +5,10 @@ function forgot_pass() {
     $get_data = $con->prepare("SELECT * FROM users WHERE email=?");
     $get_data->execute([$u_email]);
     $user_data = $get_data->fetch();
+    if (!$user_data) {
+        echo "<script>window.alert('User does not exists!')</script>";
+        exit();
+    }
     $ver_key = hash('whirlpool', time().$u_email);
     $update = $con->prepare('UPDATE users SET vkey=:ver_key WHERE email=:u_email');
     $update->execute(array(':ver_key'=>$ver_key, ':u_email'=>$user_data['email']));

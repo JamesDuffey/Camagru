@@ -4,6 +4,10 @@ function reset_pass($new_pass, $ver_key, $u_email) {
 	$get_data = $con->prepare("SELECT * FROM users WHERE email=:u_email");
 	$get_data->execute(array(':u_email'=>$u_email));
     $user_data = $get_data->fetch();
+    if (!$user_data) {
+        echo "<script>window.alert('User does not exists!')</script>";
+        exit();
+    }
 	if ($ver_key != $user_data['vkey']) {
 		echo "window.alert('verification key doesn't match')";
 		exit();
