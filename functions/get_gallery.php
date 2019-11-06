@@ -14,14 +14,14 @@ function get_gallery() {
 		echo "<div class='tile is-ancestor'>
 					<div class='tile is-12 is-vertical'>
 						<div class='tile is-parent'>
-						<article class='tile is-child box'>
+						
 							<figure class='image'>
 									<a href='image_page.php?img=$img_id'>
 										<img style='height:50%; width: 60%;' src='data:image/png;base64,".$img_name."' />
 									</a>
 							</figure>
 							<p style='background: transparent; color:aqua; border-color: aqua;' class='subtitle'>Likes: 5 Comments: 2</p>
-						</article>
+						
 					  </div>
 					</div>
 				</div>";
