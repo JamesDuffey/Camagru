@@ -45,7 +45,8 @@ session_start();
                     echo '<a href="users/login.php" id="login_but">Login</a>';
                     }
                 else {
-
+                    include "functions/get_gallery.php";
+                    get_gallery();
                 }
                 ?>
                 </div>
