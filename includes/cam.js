@@ -23,7 +23,6 @@ document.getElementById('shoot').addEventListener('click', function() {
 //upload taken pic on click of submit button
 document.getElementById("submit_taken").addEventListener('click', function() {
     var dataURL = canv.toDataURL('image/png');
-    console.log(dataURL);
     document.getElementById('taken').value = dataURL;
 });
 
@@ -32,17 +31,20 @@ document.getElementById("submit_taken").addEventListener('click', function() {
 overlay.forEach(function(element) {
     element.addEventListener('click', function(){
         image = element;
-        if (image.src === "http://localhost:8080/Camagru/images/superimposables/neon_triangle.png") {
+        if (image.src === "http://localhost:8080/Camagru/images/no.png") {
             contx.drawImage(image, 140, 0, 480, 480);
         }
-        if (image.src === "http://localhost:8080/Camagru/images/superimposables/cracked_glass.png") {
+        if (image.src === "http://localhost:8080/Camagru/images/dab.png") {
             contx.drawImage(image, 0, 0, 715, 473);
         }
-        if (image.src === "http://localhost:8080/Camagru/images/superimposables/handsome.png") {
+        if (image.src === "http://localhost:8080/Camagru/images/pepe.png") {
             contx.drawImage(image, 140, 45, 380, 380);
         }
-        if (image.src === "http://localhost:8080/Camagru/images/superimposables/paint_me_bart.png") {
+        if (image.src === "http://localhost:8080/Camagru/images/panda.png") {
             contx.drawImage(image, 160, 205, 380, 275);
         }
+        if (image.src === "http://localhost:8080/Camagru/images/poo.png") {
+            contx.drawImage(image, 140, 45, 380, 380);
+    }
     });
 });

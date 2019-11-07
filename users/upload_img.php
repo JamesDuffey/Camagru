@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 include("config/dbcon.php");
+include "../functions/upload_photo.php";
 session_start();
 ?>
 <html lang="en">
@@ -24,39 +25,37 @@ session_start();
         <div class="reg">
         <section class="section" style="margin-top:150px;margin-bottom:100px">
 	<!-- webcam and image upload tile -->
-				<div class="tile is-ancestor">
-					<div class="tile is-8">
-						<div class="tile is-parent">
-							<article class="tile is-child box">
-								<p class="title">Take a picture</p>
-									<video autoplay id='vid' width='720' height='480' style=''></video>
-									<br/>
-									<div class="buttons is-centered">
-										<button class="button is-centered" id="shoot" >Take Picture</button>
-									</div>
-									<canvas id='uploadCanvas' width='720' height='480' style=""></canvas>
-								<form action="" method="POST" enctype=multipart/form-data>
-									<input name="taken" id="taken" type="hidden" value="upload_taken.php">
-									<div class="box column has-text-centered is-10 is-offset-1">
-										<img src="http://localhost:8080/Camagru/images/dab.png" class="supers" width="100" height="100">
-										<img src="http://localhost:8080/Camagru/images/no.png" class="supers" width="100" height="100">
-										<img src="http://localhost:8080/Camagru/images/pepe.png" class="supers" width="100" height="100">
-                                        <img src="http://localhost:8080/Camagru/images/poo.png" class="supers" width="100" height="100">
-                                        <img src="http://localhost:8080/Camagru/images/panda.png" class="supers" width="100" height="100">
-									</div>
-									<div class="buttons is-centered">
-										<button class="button is-centered is-hidden" type="submit" name="submit_taken" id="submit_taken" style="">Upload Photo</button>
-									</div>
-								<br/><br/><p class="title">Or Upload a picture</p>
-                                <input name="upl_image" id="upl_image" type="file" style="background: transparent; color:aqua; border-color: aqua; font-size:17px; margin-top: 1%;">
-			<input class="button" name="upload" type="submit" value="Upload Picture" style="background: transparent; color:aqua; border-color: aqua; font-size:17px; margin-top: 1%;">
-								</form>
-							</article>
-						</div>
-					</div>
-        <form action="" method="POST" enctype=multipart/form-data>
-			
-	    </form>
+		<div class="tile is-ancestor">
+			<div class="tile is-8">
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<p class="title">Take a picture</p>
+							<video autoplay id='vid' width='720' height='480' style=''></video>
+							<br/>
+							<div class="buttons is-centered">
+								<button class="button is-centered" id="shoot" >Take Picture</button>
+							</div>
+							<canvas id='uploadCanvas' width='720' height='480' style=""></canvas>
+						<form action="" method="POST" enctype=multipart/form-data>
+							<input name="taken" id="taken" type="hidden" value="upload_taken.php">
+
+							<div class="box column has-text-centered is-10 is-offset-1">
+								<img src="http://localhost:8080/Camagru/images/dab.png" class="supers" width="100" height="100">
+								<img src="http://localhost:8080/Camagru/images/no.png" class="supers" width="100" height="100">
+								<img src="http://localhost:8080/Camagru/images/pepe.png" class="supers" width="100" height="100">
+								<img src="http://localhost:8080/Camagru/images/poo.png" class="supers" width="100" height="100">
+								<img src="http://localhost:8080/Camagru/images/panda.png" class="supers" width="100" height="100">
+							</div>
+							<div class="buttons is-centered">
+								<button class="button is-centered is-hidden" type="submit" name="submit_taken" id="submit_taken" style="">Upload Photo</button>
+							</div>
+							<br/><br/><p class="title">Or Upload a picture</p>
+							<input name="upl_image" id="upl_image" type="file" style="background: transparent; color:aqua; border-color: aqua; font-size:17px; margin-top: 1%;">
+							<input class="button" name="upload" type="submit" value="Upload Picture" style="background: transparent; color:aqua; border-color: aqua; font-size:17px; margin-top: 1%;">
+						</form>
+					</article>
+				</div>
+			</div>
         </div>
     </section>
     <script src="../includes/cam.js"></script>
@@ -65,6 +64,7 @@ session_start();
 
 </html>
 <?php
+
 if (isset($_POST['upload'])){
     if (isset($_FILES['upl_image']['name'])){
         include '../functions/upload.php';
@@ -72,4 +72,3 @@ if (isset($_POST['upload'])){
     }
 }
 ?>
-}
