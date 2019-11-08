@@ -23,23 +23,23 @@ session_start();
             <h1 style="color: aqua; font-size:40px;">Upload Image</h1>
         </div>
         <div class="reg">
-        <section class="section" style="margin-top:150px;margin-bottom:100px">
+        <section class="section" style="margin-top:0%;margin-bottom:0px">
 	<!-- webcam and image upload tile -->
-		<div class="tile is-ancestor">
-			<div class="tile is-8">
-				<div class="tile is-parent">
-					<article class="tile is-child box">
+		<div class="tile is-ancestor" style="background:transparent;">
+			<div class="tile is-8" style="background:transparent;">
+				<div class="tile is-parent" style="background:transparent;">
+					<article class="tile is-child box" style="background:transparent;">
 						<p class="title">Take a picture</p>
 							<video autoplay id='vid' width='720' height='480' style=''></video>
 							<br/>
-							<div class="buttons is-centered">
-								<button class="button is-centered" id="shoot" >Take Picture</button>
+							<div >
+								<button style="background: transparent; color:aqua; border-color: aqua; font-size:22px; radius: 0px" id="shoot" >Take Picture</button>
 							</div>
 							<canvas id='uploadCanvas' width='720' height='480' style=""></canvas>
 						<form action="" method="POST" enctype=multipart/form-data>
 							<input name="taken" id="taken" type="hidden" value="upload_taken.php">
 
-							<div class="box column has-text-centered is-10 is-offset-1">
+							<div class="box" style="background:grey;">
 								<img src="http://localhost:8080/Camagru/images/dab.png" class="supers" width="100" height="100">
 								<img src="http://localhost:8080/Camagru/images/no.png" class="supers" width="100" height="100">
 								<img src="http://localhost:8080/Camagru/images/pepe.png" class="supers" width="100" height="100">
@@ -56,7 +56,19 @@ session_start();
 					</article>
 				</div>
 			</div>
-        </div>
+		</div>
+		<div class="tile is-4">
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<p class="title">Images You've Uploaded</p>
+								<?php
+								include '../functions/uploaded_cam.php'; 
+								uploaded_cam($_SESSION['user_id']); 
+								?>
+							</article>
+						</div>
+					</div>
+				</div>
     </section>
     <script src="../includes/cam.js"></script>
  <footer></footer>

@@ -16,12 +16,11 @@ function get_gallery() {
 						<div class='tile is-parent'>
 						
 							<figure class='image'>
-									<a href='image_page.php?img=$img_id'>
+									<a href='users/image_page.php?img=$img_id'>
 										<img style='height:50%; width: 60%;' src='data:image/png;base64,".$img_name."' />
 									</a>
 							</figure>
 							<p style='background: transparent; color:aqua; border-color: aqua;' class='subtitle'>Likes: 5 Comments: 2</p>
-						
 					  </div>
 					</div>
 				</div>";

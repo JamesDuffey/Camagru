@@ -1,6 +1,8 @@
 <?php
 include '../includes/connection.php';
-
+if (session_id() === "") {
+    session_start();
+}
 if (isset($_POST['submit_taken'])) {
     echo "<script>alert(".$_POST['taken'].")</script>";
     if (isset($_POST['taken'])) {
