@@ -13,7 +13,8 @@ session_start();
 <body background="../background/dark-honeycomb.png">
      <header style="width: 100%; height: 10%;"><h1><a href="../index.php">Camagru</a><h1>
          <!-- <div><a style="float:right;"href="users/register.php">Register</a></div> -->
-         <ul style="list-style-type:none; margin: 0; display: inline; padding: 0;">
+		 <ul style="list-style-type:none; margin: 0; display: inline; padding: 0;">
+		 <li style="display: inline; float: left; padding-right: 20px;"><a style="float:right;" href="gallery.php" style="margin-left:20px;">Gallery</a></li>
          <li style="display: inline; float: left;"><a href="user_account.php" style="margin-left:20px;">Profile</a></li>
          <li style="display: inline; float: left;"><a href='../index.php?session_status=logout' style="margin-left:20px;">Log Out</a></li>
          </ul>
@@ -40,9 +41,9 @@ session_start();
 							<input name="taken" id="taken" type="hidden" value="upload_taken.php">
 
 							<div class="box" style="background:grey;">
-								<img src="http://localhost:8080/Camagru/images/dab.png" class="supers" width="100" height="100">
-								<img src="http://localhost:8080/Camagru/images/no.png" class="supers" width="100" height="100">
-								<img src="http://localhost:8080/Camagru/images/pepe.png" class="supers" width="100" height="100">
+								<img src="http://localhost:8080/Camagru/images/frame.png" class="supers" width="100" height="100">
+								<img src="http://localhost:8080/Camagru/images/pika.png" class="supers" width="100" height="100">
+								<img src="http://localhost:8080/Camagru/images/yoshi.png" class="supers" width="100" height="100">
 								<img src="http://localhost:8080/Camagru/images/poo.png" class="supers" width="100" height="100">
 								<img src="http://localhost:8080/Camagru/images/panda.png" class="supers" width="100" height="100">
 							</div>
