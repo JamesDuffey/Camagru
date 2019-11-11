@@ -31,17 +31,17 @@ document.getElementById("submit_taken").addEventListener('click', function() {
 overlay.forEach(function(element) {
     element.addEventListener('click', function(){
         image = element;
-        if (image.src === "http://localhost:8080/Camagru/images/no.png") {
-            contx.drawImage(image, 140, 0, 480, 480);
+        if (image.src === "http://localhost:8080/Camagru/images/frame.png") {
+            contx.drawImage(image, 0, 0, 720, 480);
         }
-        if (image.src === "http://localhost:8080/Camagru/images/dab.png") {
-            contx.drawImage(image, 0, 0, 715, 473);
+        if (image.src === "http://localhost:8080/Camagru/images/pika.png") {
+            contx.drawImage(image, 500, 100, 300, 330);
         }
-        if (image.src === "http://localhost:8080/Camagru/images/pepe.png") {
-            contx.drawImage(image, 140, 45, 380, 380);
+        if (image.src === "http://localhost:8080/Camagru/images/yoshi.png") {
+            contx.drawImage(image, 0, 45, 300, 250);
         }
         if (image.src === "http://localhost:8080/Camagru/images/panda.png") {
-            contx.drawImage(image, 160, 205, 380, 275);
+            contx.drawImage(image, 0, 280, 255, 200);
         }
         if (image.src === "http://localhost:8080/Camagru/images/poo.png") {
             contx.drawImage(image, 140, 45, 380, 380);
