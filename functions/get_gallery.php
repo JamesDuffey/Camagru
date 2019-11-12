@@ -18,7 +18,7 @@ function get_gallery() {
 						<div class='tile is-parent'>
 							<figure class='image'>
 									<a href='image_page.php?img=$img_id'>
-										<img style='height:30%; width: 40%; border:2px solid aqua;' src='data:image/png;base64,".$img_name."' />
+										<img style='height:30%; width: 35%; border:2px solid aqua;' src='data:image/png;base64,".$img_name."' />
 									</a>
 							</figure>
 							<p style='background: transparent; color:aqua; border-color: aqua;' class='subtitle'>$likes_amnt Likes - $cmnts_amnt Comments</p>
