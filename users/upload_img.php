@@ -27,14 +27,14 @@ session_start();
         <section class="section" style="margin-top:0%;margin-bottom:0px">
 	<!-- webcam and image upload tile -->
 		<div class="tile is-ancestor" style="background:transparent;">
-			<div class="tile is-8" style="background:transparent;">
+			<div class="tile" style="background:transparent;">
 				<div class="tile is-parent" style="background:transparent;">
 					<article class="tile is-child box" style="background:transparent;">
-						<p class="title">Take a picture</p>
+						<p style="background: transparent; color:aqua; border-color: aqua;" class="title">Take a picture</p>
 							<video autoplay id='vid' width='720' height='480' style=''></video>
 							<br/>
 							<div >
-								<button style="background: transparent; color:aqua; border-color: aqua; font-size:22px; radius: 0px" id="shoot" >Take Picture</button>
+								<button style="background: transparent; color:aqua; border-color: aqua; font-size:22px; border-radius:0px;" id="shoot" >Take Picture</button>
 							</div>
 							<canvas id='uploadCanvas' width='720' height='480' style=""></canvas>
 						<form action="" method="POST" enctype=multipart/form-data>
@@ -47,8 +47,8 @@ session_start();
 								<img src="http://localhost:8080/Camagru/images/poo.png" class="supers" width="100" height="100">
 								<img src="http://localhost:8080/Camagru/images/panda.png" class="supers" width="100" height="100">
 							</div>
-							<div class="buttons is-centered">
-								<button class="button is-centered is-hidden" type="submit" name="submit_taken" id="submit_taken" style="">Upload Photo</button>
+							<div style="padding-top:1%;">
+								<button style="background: transparent; color:aqua; border-color: aqua; font-size:22px; border-radius:0px;" type="submit" name="submit_taken" id="submit_taken">Upload Photo</button>
 							</div>
 							<br/><br/><p class="title">Or Upload a picture</p>
 							<input name="upl_image" id="upl_image" type="file" style="background: transparent; color:aqua; border-color: aqua; font-size:17px; margin-top: 1%;">
@@ -58,18 +58,18 @@ session_start();
 				</div>
 			</div>
 		</div>
-		<div class="tile is-4">
-						<div class="tile is-parent">
-							<article class="tile is-child box">
-								<p class="title">Images You've Uploaded</p>
-								<?php
-								include '../functions/uploaded_cam.php'; 
-								uploaded_cam($_SESSION['user_id']); 
-								?>
-							</article>
-						</div>
-					</div>
+		<div class="tile">
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<p class="title">Images You've Uploaded</p>
+						<?php
+							include '../functions/uploaded_cam.php'; 
+							uploaded_cam($_SESSION['user_id']); 
+						?>
+					</article>
 				</div>
+		</div>
+	</div>
     </section>
     <script src="../includes/cam.js"></script>
  <footer></footer>
