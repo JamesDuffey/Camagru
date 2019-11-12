@@ -41,20 +41,6 @@ session_start();
             <div class="reg">
              <?PHP
                 include '../functions/get_img.php';
-                include '../functions/delete_img.php';
-
-                // if (isset($_POST['like'])) {
-                //     post_like($_GET['img']);
-                // }
-                // if (isset($_POST['apathy'])) {
-                //     delete_like($_GET['img']);
-                // }
-                // if (isset($_POST['comment'])) {
-                //     post_comment($_GET['img']);
-                // }
-                if (isset($_POST['delete_post'])) {
-                    delete_img($_GET['img']);
-                }
                 get_image($_GET['img']);
             ?>
             <form method="POST">
@@ -75,10 +61,28 @@ session_start();
 								<input class="textarea" type="text" name="cmntContent" placeholder="Leave a comment..">
 								<div class="field is-grouped is-grouped-right">
                                     <br/>
-									<input class="button is-success" type="submit" name="comment" value="Comment">
+									<input class="button" type="submit" name="comment" value="Comment">
 								</div>
 							</form>
             </div>
+            <?php
+                include '../functions/comments.php';
+                include '../functions/delete_img.php';
+
+                // if (isset($_POST['like'])) {
+                //     post_like($_GET['img']);
+                // }
+                // if (isset($_POST['apathy'])) {
+                //     delete_like($_GET['img']);
+                // }
+                 if (isset($_POST['comment'])) {
+                     post_comment($_GET['img']);
+                 }
+                if (isset($_POST['delete_post'])) {
+                    delete_img($_GET['img']);
+                }
+                get_comments($_GET['img']);
+            ?>
     </section>
  <footer></footer>
 </body>
