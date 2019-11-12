@@ -9,8 +9,8 @@ function uploaded_cam($user) {
 			$img_name = $img['img_name'];
 			$img_id = $img['img_id'];
 			echo "	<figure class='image'>
-						<a href='users/image_page.php?img=$img_id'>
-							<img src='data:image/png;base64,".$img_name."' />
+						<a href='image_page.php?img=$img_id'>
+							<img style='height:30%; width: 35%; border:2px solid aqua;' src='data:image/png;base64,".$img_name."' />
 						</a>
 					</figure>";
 		}
