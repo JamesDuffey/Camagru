@@ -13,7 +13,7 @@ function get_image($img_id) {
 						<div class='tile is-parent'>
 						<article class='tile is-child box'>
 							<figure class='image'>
-										<img style='border:2px solid aqua' src='data:image/png;base64,$img_nme' />
+										<img style='border:2px solid aqua; height:30%; width: 35%; border:2px solid aqua;' src='data:image/png;base64,$img_nme' />
 							</figure>
 							<br/>
 							<p style='color: aqua; font-size:20px;'>$likes_amnt Likes - $cmnts_amnt Comments</p>
