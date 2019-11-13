@@ -8,7 +8,7 @@
 			</span>
 		</p>
 		<div class="control" >
-			<input class="button is-success is-medium" type="submit" name="username" value="Update">
+			<input class="button is-success is-medium" type="submit" name="user name" value="Update">
 		</div>
 	</div>
 </form>

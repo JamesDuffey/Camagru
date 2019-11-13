@@ -15,7 +15,7 @@ function commentor_name($usr_id) {
 	$get_cmntr_name = $con->prepare($cmntr_name_sql);
 	$get_cmntr_name->execute([$usr_id]);
 	$cmntr_name = $get_cmntr_name->fetch();
-	return $cmntr_name['user_name'];
+	return $cmntr_name['username'];
 }
 
 function valid_comment($comment) {
@@ -51,7 +51,6 @@ function notify_comment($user) {
 
 
 function post_comment($img) {
-	echo "<script>alert('yup')</script>";
 	include '../includes/connection.php';
 	
 	if (isset($_SESSION['user_id'])) {
@@ -80,6 +79,7 @@ function get_comments($img_id) {
 	$get_cmnts->execute([$img_id]);
 	while ($cmnts = $get_cmnts->fetch()) {
 		$commentor = commentor_name($cmnts['c_uid']);
+		
 		$comment = $cmnts['comment'];
 		echo "	<div class='tile is-ancestor'>
 					<div class='tile'>
