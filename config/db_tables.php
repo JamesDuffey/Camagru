@@ -16,7 +16,8 @@ try {
       `userpass` VARCHAR(255) NOT NULL,
       `user_image` VARCHAR(255),
       `vkey` VARCHAR(255) default 0 NOT NULL,
-      `verified` BIT default 0 NOT NULL)";
+      `verified` BIT default 0 NOT NULL),
+      `notif` BIT default 0 NOT NULL)";
       $con->exec($sql);
 
 
