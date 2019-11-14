@@ -20,15 +20,15 @@ session_start();
     <section>
             <div style="text-align: center;">
              <h1 style="color: aqua; font-size:40px;">User Account</h1>
-            </div>
-            <?PHP
-            if (isset($_GET['session_status'])){
+             <?PHP
+            if (isset($_SESSION['user_id'])){
                 include_once 'change_acc.php';
             }
             if (isset($_POST['updt_name']) || isset($_POST['updt_passwd']) || isset($_POST['updt_notif'])){
                 update_user($u_data['user_id']);
             }
             ?>
+            </div>
     </section>
  <footer></footer>
 </body>

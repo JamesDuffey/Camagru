@@ -1,45 +1,50 @@
 <form method="POST" enctype="multipart/form-data">
-	<label class="label">Username</label>
+	<label class="text">Username:</label>
 	<div class="field has-addons">
 		<p class="control has-icons-left">
-			<input class="input is-medium" type="text" name="new_name" placeholder="<?php echo $_SESSION['user_name'] ?>" required/>
-			<span class="icon is-small is-left">
-				<i class="fas fa-user"></i>
-			</span>
+			<input class="input is-medium" type="text" name="new_name" placeholder="<?php echo $_SESSION['username'] ?>" required/>
 		</p>
-		<div class="control" >
-			<input class="button is-success is-medium" type="submit" name="user name" value="Update">
+		<div class="control">
+			<input id="log_but" type="submit" name="username" value="Update">
 		</div>
 	</div>
 </form>
-
+<br/>
+<br/>
 <form method="POST" enctype="multipart/form-data">
-	<label class="label">Password: </label>
+	<label class="text">Email:</label>
+	<div class="field has-addons">
+		<p class="control has-icons-left">
+			<input class="input is-medium" type="text" name="new_email" placeholder="<?php echo $_SESSION['email'] ?>" required/>
+		</p>
+		<div class="control">
+			<input id="log_but" type="submit" name="email" value="Update">
+		</div>
+	</div>
+</form>
+<br/>
+<br/>
+<form method="POST" enctype="multipart/form-data">
+	<label class="text">Password: </label>
 	<div class="field has-addons">
 		<p class="control has-icons-left">
 			<input class="input is-medium" type="password" name="new_pass" placeholder="New Password" required/>
-			<span class="icon is-small is-left">
-				<i class="fas fa-lock"></i>
-			</span>
 		</p>
 		<div class="control" >
-			<input class="button is-success is-medium" type="submit" name="updt_passwd" value="Update">
+			<input id="log_but" type="submit" name="updt_passwd" value="Update">
 		</div>
 	</div>
 </form>
-
+<br />
+<br />
 <form method="POST">
-	<div class="level">
-		<div class="level-left">
 			<div class="level-item">
-				<label class='label'>Notifications: </label>
+				<label class="text">Notifications: </label>
 			</div>
 			<div class="level-item">
 				<input type="checkbox" name="notif" <?php if($_SESSION['notif'] == 1){echo "checked";} ?>>
 			</div>
 			<div class="level-item">
-				<input class="button is-success is-medium" type="submit" name="updt_notif" value="Update">
+				<input id="log_but" type="submit" name="updt_notif" value="Update">
 			</div>
-		</div>
-	</div>
 </form>
