@@ -36,7 +36,6 @@ function get_post_user($img_id) {
 
 function notify_comment($user) {
     include '../includes/connection.php';
-    if (verif_user($user)) {
         $usr_email_sql = "SELECT * FROM users WHERE user_id=:user_id";
         $get_user_email = $con->prepare($usr_email_sql);
         $get_user_email->execute([':user_id'=>$user]);
@@ -45,8 +44,7 @@ function notify_comment($user) {
 		$body = "Someone commented on one of your pictures.";
 		$headers = "From: camagru@gmail.com\r\n";
 		$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-		mail($user_email['user_email'],$subject,$body,$headers);
-    }
+		mail($user_email['email'],$subject,$body,"");
 }
 
 
@@ -63,7 +61,7 @@ function post_comment($img) {
 				$post_cmnt = $con->prepare($post_cmnt_sql);
 				$post_cmnt->execute(array(':c_img_id'=>$img, ':c_uid'=>$commentor_id, ':comment'=>$comment));
 				$op = get_post_user($img);
-				//notify_comment($op);
+				notify_comment($op);
 			} else {
 				echo "<script>alert('Please Log In or Register to like or comment!')</script>";
 			}
