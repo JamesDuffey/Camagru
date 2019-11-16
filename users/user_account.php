@@ -22,12 +22,14 @@ session_start();
             <div style="text-align: center;">
              <h1 style="color: aqua; font-size:40px;">User Account</h1>
              <?PHP
+
             if (isset($_SESSION['user_id'])){
                 include_once 'change_acc.php';
             }
-            if (isset($_POST['updt_name']) || isset($_POST['updt_passwd']) || isset($_POST['updt_notif'])){
+            if (isset($_POST['username']) || isset($_POST['email']) || isset($_POST['updt_passwd']) || isset($_POST['updt_notif'])){
+                echo "<script>window.alert('yasdwfokup')</script>";
                 include '../functions/change_acc.php';
-                update_user($u_data['user_id']);
+                update_user($_SESSION['user_id']);
             }
             ?>
             </div>

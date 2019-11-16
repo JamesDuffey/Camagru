@@ -17,6 +17,7 @@
             $_SESSION['email'] = $user_data['email'];
             $_SESSION['user_id'] = $user_data['user_id'];
             $_SESSION['username'] = $u_username;
+            $_SESSION['notif'] = $user_data['notif'];
             echo "<script>window.alert('Logged In')</script>";
             echo "<script>window.location.replace('../index.php')</script>";
         }

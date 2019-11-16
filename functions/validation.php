@@ -26,8 +26,4 @@
             exit();
         }
     }
-
-    function verif_email(){
-        
-    }
 ?>
