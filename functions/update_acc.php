@@ -25,12 +25,12 @@ function update_pass($user_id, $new_pass) {
  function update_notify($user_id) {
      include '../includes/connection.php';
  	if (isset($_POST['notif'])) {
- 		$updt_sql = "UPDATE users SET notify=1 WHERE user_id=:u_id";
+ 		$updt_sql = "UPDATE users SET notif=1 WHERE user_id=:u_id";
  		$updt_notif = $con->prepare($updt_sql);
  		$updt_notif->execute([':u_id'=>$user_id]);
  		$_SESSION['notif'] = 1;
  	} else {
- 		$updt_sql = "UPDATE users SET notify=0 WHERE user_id=:u_id";
+ 		$updt_sql = "UPDATE users SET notif=0 WHERE user_id=:u_id";
  		$updt_notif = $con->prepare($updt_sql);
  		$updt_notif->execute([':u_id'=>$user_id]);
  		$_SESSION['notif'] = 0;
