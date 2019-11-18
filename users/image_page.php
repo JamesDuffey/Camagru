@@ -49,19 +49,20 @@ session_start();
                 include_once '../functions/check_user_id.php';
                 echo "<div class='level'>";
                     if (!is_liked($_GET['img'])) {
-                        echo "<div class='level-left'><input class='button is-light' type='submit' name='like' value='Like'></div><br/>";
+                        echo "<div class='level-left'><input style='background: transparent; color:aqua; border-color: aqua; font-size:22px; border-radius:0px;' type='submit' name='like' value='Like'></div><br/>";
                     } else {
-                        echo "<div class='level-left'><input class='button is-success' type='submit' name='unlike' value='Unlike'></div><br/>";
+                        echo "<div class='level-left'><input style='background: transparent; color:aqua; border-color: aqua; font-size:22px; border-radius:0px;' type='submit' name='unlike' value='Unlike'></div><br/>";
                     }
                     if (check_user_id($_GET['img'])) {
-                        echo "<div class='level-right'><input class='button is-danger' type='submit' name='delete_post' value='Delete'></div>";
+                        echo "<div class='level-right'><input style='background: transparent; color:aqua; border-color: aqua; font-size:22px; border-radius:0px;' type='submit' name='delete_post' value='Delete'></div>";
                     }
                 echo "</div>";
                 ?>
+                <br />
                 <input class="textarea" type="text" name="cmntContent" placeholder="Leave a comment..">
                 <div class="field is-grouped is-grouped-right">
                     <br/>
-                    <input class="button" type="submit" name="comment" value="Comment">
+                    <input style='background: transparent; color:aqua; border-color: aqua; font-size:22px; border-radius:0px;' type="submit" name="comment" value="Comment">
                 </div>
         </form>
             </div>
