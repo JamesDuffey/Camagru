@@ -31,7 +31,7 @@
 			<input class="input is-medium" type="password" name="new_pass" placeholder="New Password" required/>
 		</p>
 		<div class="control" >
-			<input id="log_but" type="submit" name="updt_passwd" value="Update">
+			<input id="log_but" type="submit" name="updt_pass" value="Update">
 		</div>
 	</div>
 </form>

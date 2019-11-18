@@ -26,8 +26,7 @@ session_start();
             if (isset($_SESSION['user_id'])){
                 include_once 'change_acc.php';
             }
-            if (isset($_POST['username']) || isset($_POST['email']) || isset($_POST['updt_passwd']) || isset($_POST['updt_notif'])){
-                echo "<script>window.alert('yasdwfokup')</script>";
+            if (isset($_POST['username']) || isset($_POST['email']) || isset($_POST['updt_pass']) || isset($_POST['updt_notif'])){
                 include '../functions/change_acc.php';
                 update_user($_SESSION['user_id']);
             }

@@ -35,7 +35,7 @@ function get_post_user($img_id) {
 }
 
 function notify_comment($user) {
-    include '../includes/connection.php';
+	include '../includes/connection.php';
         $usr_email_sql = "SELECT * FROM users WHERE user_id=:user_id";
         $get_user_email = $con->prepare($usr_email_sql);
         $get_user_email->execute([':user_id'=>$user]);
@@ -45,6 +45,7 @@ function notify_comment($user) {
 		$headers = "From: camagru@gmail.com\r\n";
 		$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 		mail($user_email['email'],$subject,$body,"");
+		echo "<script>alert('Email Sent')</script>";
 }
 
 
@@ -77,7 +78,6 @@ function get_comments($img_id) {
 	$get_cmnts->execute([$img_id]);
 	while ($cmnts = $get_cmnts->fetch()) {
 		$commentor = commentor_name($cmnts['c_uid']);
-		
 		$comment = $cmnts['comment'];
 		echo "	<div class='tile is-ancestor'>
 					<div class='tile'>

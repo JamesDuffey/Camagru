@@ -16,7 +16,7 @@ function update_email($user_id, $new_email) {
 }
 
 function update_pass($user_id, $new_pass) {
-    include '../includes/connection.php';
+	include '../includes/connection.php';
 		$updt_sql = "UPDATE users SET userpass=:u_pass WHERE user_id=:u_id";
 		$updt_passwd = $con->prepare($updt_sql);
 		$updt_passwd->execute(array(':u_pass'=>$new_pass, ':u_id'=>$user_id));
