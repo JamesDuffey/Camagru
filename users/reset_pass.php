@@ -35,7 +35,6 @@ session_start();
                        include '../functions/validation.php';
                        $ver_key = $_GET['ver_key'];
                        $u_email = $_POST['email'];
-                       //validate_password($_POST['new_pass']);
                        $new_pass = hash('whirlpool', $_POST['new_pass']);
                        reset_pass($new_pass, $ver_key, $u_email);
 					}

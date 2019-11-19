@@ -13,8 +13,8 @@ session_start();
      <header style="width: 100%; height: 10%;"><h1><a href="../index.php">Camagru</a><h1>
          <!-- <div><a style="float:right;"href="users/register.php">Register</a></div> -->
          <ul style="list-style-type:none; margin: 0; display: inline; padding: 0;">
-         <li style="display: inline; float: left; padding-right: 20px;"><a style="float:right;" href="gallery.php" style="margin-left:20px;">Gallery</a></li>
-         <li style="display: inline; float: left; padding-right: 20px;"><a style="float:right;"href="upload_img.php" style="margin-left:20px;">Upload</a></li>
+         <li style="display: inline; float: left; padding-right: 20px;"><a href="gallery.php" style="margin-left:20px;">Gallery</a></li>
+         <li style="display: inline; float: left; padding-right: 20px;"><a href="upload_img.php" style="margin-left:20px;">Upload</a></li>
          <li style="display: inline; float: left;"><a href='../index.php?session_status=logout' style="margin-left:20px;">Log Out</a></li>
          </ul>
      </header>

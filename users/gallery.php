@@ -17,15 +17,15 @@ session_start();
          <ul style="list-style-type:none; margin: 0; display: inline; padding: 0;">
             <?PHP
                 if (isset($_SESSION['user_id'])){
-                    echo '<li style="display: inline; float: left; margin-right:20px;"><a style="float:right;"href="user_account.php" style="margin-left:20px;">Profile</a></li>';
+                    echo '<li style="display: inline; float: left; margin-right:20px;"><a href="user_account.php" style="margin-left:20px;">Profile</a></li>';
                 }
             
                 if (!isset($_SESSION['user_id'])){
-                    echo '<li style="display: inline; float: left;"><a style="float:right;"href="register.php" style="margin-left:20px;">Register</a></li>';
+                    echo '<li style="display: inline; float: left;"><a shref="register.php" style="margin-left:20px;">Register</a></li>';
                 }
             
                 if (isset($_SESSION['user_id'])){
-                    echo '<li style="display: inline; float: left;"><a style="float:right;"href="upload_img.php" style="margin-left:20px;">Upload</a></li>';
+                    echo '<li style="display: inline; float: left;"><a href="upload_img.php" style="margin-left:20px;">Upload</a></li>';
                 }
             
                 if (isset($_SESSION['user_id'])) {

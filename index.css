@@ -47,6 +47,12 @@ section div h1 {
     font-size: 25px;
 }
 
+.title {
+    background: transparent;
+    color:aqua;
+    border-color: aqua;
+}
+
 #log_title {
     color: white;
     font-size: 35px;

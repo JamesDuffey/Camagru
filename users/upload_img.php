@@ -14,7 +14,7 @@ session_start();
      <header style="width: 100%; height: 10%;"><h1><a href="../index.php">Camagru</a><h1>
          <!-- <div><a style="float:right;"href="users/register.php">Register</a></div> -->
 		 <ul style="list-style-type:none; margin: 0; display: inline; padding: 0;">
-		 <li style="display: inline; float: left; padding-right: 20px;"><a style="float:right;" href="gallery.php" style="margin-left:20px;">Gallery</a></li>
+		 <li style="display: inline; float: left; padding-right: 20px;"><a href="gallery.php" style="margin-left:20px;">Gallery</a></li>
          <li style="display: inline; float: left;"><a href="user_account.php" style="margin-left:20px;">Profile</a></li>
          <li style="display: inline; float: left;"><a href='../index.php?session_status=logout' style="margin-left:20px;">Log Out</a></li>
          </ul>
@@ -30,7 +30,7 @@ session_start();
 			<div class="tile" style="background:transparent;">
 				<div class="tile is-parent" style="background:transparent;">
 					<article class="tile is-child box" style="background:transparent;">
-						<p style="background: transparent; color:aqua; border-color: aqua;" class="title">Take a picture</p>
+						<p class="title">Take a picture</p>
 							<video autoplay id='vid' width='720' height='480' style=''></video>
 							<br/>
 							<div >
