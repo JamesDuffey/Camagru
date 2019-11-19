@@ -39,13 +39,15 @@ function notify_comment($user) {
         $usr_email_sql = "SELECT * FROM users WHERE user_id=:user_id";
         $get_user_email = $con->prepare($usr_email_sql);
         $get_user_email->execute([':user_id'=>$user]);
-        $user_email = $get_user_email->fetch();
-		$subject = "Camagru Comment";
-		$body = "Someone commented on one of your pictures.";
-		$headers = "From: camagru@gmail.com\r\n";
-		$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-		mail($user_email['email'],$subject,$body,"");
-		echo "<script>alert('Email Sent')</script>";
+		$user_email = $get_user_email->fetch();
+		if ($user_email['notif'] == 1) {
+			$subject = "Camagru Comment";
+			$body = "Someone commented on one of your pictures.";
+			$headers = "From: camagru@gmail.com\r\n";
+			$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+			mail($user_email['email'],$subject,$body,"");
+			echo "<script>alert('Email Sent')</script>";
+		}
 }
 
 
