@@ -9,23 +9,15 @@ function get_comments($img_id) {
         $cmntr_img = get_commentor_img($cmnts['cmnt_usr_id']);
         $comment = $cmnts['comment'];
         echo "	<div class='tile is-ancestor'>
-					<div class='tile is-8 is-vertical'>
+					<div class='tile is-vertical'>
 						<div class='tile is-parent'>
-						<article class='media'>
-							<figure class='media-left'>
-								<p class='image is-64x64'>
+								<p class='image'>
 									<img src='data:image/png;base64,$cmntr_img'>
 								</p>
-							</figure>
-							<div class='media-content'>
-								<div class='content'>
 									<p>
 										<strong>$commentor</strong><br/>
 										<small>$comment</small>
 									</p>
-								</div>
-							<div>
-						</article>
 					  </div>
 					</div>
 				</div>";

@@ -8,7 +8,7 @@ function update_user($user_id) {
 	}
 	if (isset($_POST['email'])) {
 		include_once 'validation.php';
-		//validate_email($_POST['new_pass']);
+		validate_email($_POST['new_email']);
 		update_email($user_id, $_POST['new_email']);
 	}
 	if (isset($_POST['updt_pass'])) {

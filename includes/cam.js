@@ -1,5 +1,6 @@
 var video = document.querySelector("#vid");
 var overlay = document.querySelectorAll(".supers");
+
 //getContext to work with canvas
 var canv = document.getElementById("uploadCanvas");
 var contx = canv.getContext('2d');
@@ -17,7 +18,6 @@ navigator.mediaDevices.getUserMedia({video:true}).then(function(stream) {
 document.getElementById('shoot').addEventListener('click', function() {
         contx.drawImage(video, 0, 0, 720, 480);
         document.getElementById('submit_taken').setAttribute("class", "button is-centered");
-        // contx.drawImage(overlay, 0, 0, 720, 480);
     });
 
 //upload taken pic on click of submit button

@@ -53,21 +53,26 @@ function post_comment($img) {
 	include '../includes/connection.php';
 	
 	if (isset($_SESSION['user_id'])) {
-		$comment = $_POST['cmntContent'];
-		if (valid_comment($comment)) {
-			$commentor_id = $_SESSION['user_id'];
-			
-			if ($commentor_id) {
-				$post_cmnt_sql = "INSERT INTO comments(c_img_id, c_uid, comment) VALUES(:c_img_id, :c_uid, :comment)";
-				$post_cmnt = $con->prepare($post_cmnt_sql);
-				$post_cmnt->execute(array(':c_img_id'=>$img, ':c_uid'=>$commentor_id, ':comment'=>$comment));
-				$op = get_post_user($img);
-				notify_comment($op);
-			} else {
-				echo "<script>alert('Please Log In or Register to like or comment!')</script>";
-			}
-			echo "<script>window.location.replace('image_page.php?img=".$img."')</script>";
+		if (!$_POST['cmntContent']){
+			echo "<script>alert('Comment field can not be empty!')</script>";
 		}
+		else {
+			$comment = $_POST['cmntContent'];
+			if (valid_comment($comment)) {
+				$commentor_id = $_SESSION['user_id'];
+				
+				if ($commentor_id) {
+					$post_cmnt_sql = "INSERT INTO comments(c_img_id, c_uid, comment) VALUES(:c_img_id, :c_uid, :comment)";
+					$post_cmnt = $con->prepare($post_cmnt_sql);
+					$post_cmnt->execute(array(':c_img_id'=>$img, ':c_uid'=>$commentor_id, ':comment'=>$comment));
+					$op = get_post_user($img);
+					notify_comment($op);
+				} else {
+					echo "<script>alert('Please Log In or Register to like or comment!')</script>";
+				}
+		}
+			echo "<script>window.location.replace('image_page.php?img=".$img."')</script>";
+	}
 	}
 }
 
@@ -83,10 +88,10 @@ function get_comments($img_id) {
 					<div class='tile'>
 						<div class='tile is-parent'>
 							<div class='reg' >
-							<div class='content' style='text-align:center; width:100%; height:5%;'>
+							<div style='text-align:center; width:100%; height:5%;'>
 							<p style='border:3px solid white;  text-align:center; background:grey;'>
 								<strong style='color:aqua; border-color: aqua;'>$commentor</strong><br/>
-								<small style=' color:aqua; border-color: aqua;'>$comment</small>
+								<small style='color:aqua; border-color: aqua;'>$comment</small>
 							</p>
 						</div>
 						<div>

@@ -6,7 +6,7 @@ function update_pass($new_pass, $vkey) {
     $get_data->execute([$u_email]);
     $user_data = $get_data->fetch();
     if ($vkey != $user_data['vkey']) {
-        echo "window.alert('Hol\' up. It wasn't you who reset the password, was it?')";
+        echo "window.alert('Could not update details!')";
         exit();
     }
     $update = $con->prepare("UPDATE users SET userpass=:new_pass WHERE email=:u_email");

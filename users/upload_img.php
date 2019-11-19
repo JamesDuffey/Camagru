@@ -34,11 +34,13 @@ session_start();
 							<video autoplay id='vid' width='720' height='480' style=''></video>
 							<br/>
 							<div >
+								<br />
 								<button style="background: transparent; color:aqua; border-color: aqua; font-size:22px; border-radius:0px;" id="shoot" >Take Picture</button>
 							</div>
+							<br />
 							<canvas id='uploadCanvas' width='720' height='480' style=""></canvas>
 						<form action="" method="POST" enctype=multipart/form-data>
-							<input name="taken" id="taken" type="hidden" value="upload_taken.php">
+							<input name="taken" id="taken" type="hidden" value="upload_photo.php">
 
 							<div class="box" style="background:grey;">
 								<img src="http://localhost:8080/Camagru/images/frame.png" class="supers" width="100" height="100">

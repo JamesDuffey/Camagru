@@ -11,7 +11,7 @@ function get_image($img_id) {
 	$c_count = comment_count($img_id);
 	$l_count = like_count($img_id);
 	echo "<div class='tile is-ancestor'>
-					<div class='tile is-8 is-vertical'>
+					<div class='tile is-vertical'>
 						<div class='tile is-parent'>
 						<article class='tile is-child box'>
 							<figure class='image'>
