@@ -12,10 +12,11 @@ function forgot_pass() {
     $ver_key = hash('whirlpool', time().$u_email);
     $update = $con->prepare('UPDATE users SET vkey=:ver_key WHERE email=:u_email');
     $update->execute(array(':ver_key'=>$ver_key, ':u_email'=>$user_data['email']));
-    $subject = "Reset your password";
-    $body = "To reset your password please click the link\n http://localhost:8080/Camagru/users/reset_pass.php?ver_key=".$ver_key;
+    $subject = "Reset your Camagru password";
+    $body = "Greetings from Camagru "."\n\n"."To reset your password please click <a href='http://localhost:8080/Camagru/users/reset_pass.php?ver_key=".$ver_key."'>Here</a>";
     $headers = "From: camagru@gmail.com\r\n";
+    $headers .= "MIME-Version: 1.0"."\r\n";;
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-    mail($u_email,$subject,$body," ");
+    mail($u_email,$subject,$body,$headers);
 }
 ?>

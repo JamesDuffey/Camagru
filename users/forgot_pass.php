@@ -32,7 +32,7 @@ session_start();
                         if (isset($_POST['forgot_pass'])) {
                         include '../functions/forgot_pass_func.php';
                         forgot_pass();
-                        //echo '<script>window.location.href="email_verifcation.php";</script>';
+                        echo '<script>window.location.href="pass_verifcation.php";</script>';
                      }
                     ?>
                 </div>
