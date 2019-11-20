@@ -10,7 +10,7 @@ session_start();
     <title>Camagru - User Account</title>
     <link rel="stylesheet" type="text/css" href="../index.css">
 </head>
-<body background="../background/dark-honeycomb.png">
+<body background="../background/rubber_grip.png">
      <header style="width: 100%; height: 10%;"><h1><a href="../index.php">Camagru</a><h1>
          <!-- <div><a style="float:right;"href="users/register.php">Register</a></div> -->
 		 <ul style="list-style-type:none; margin: 0; display: inline; padding: 0;">

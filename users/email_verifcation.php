@@ -9,7 +9,7 @@ session_start();
     <title>Camagru - Verification</title>
     <link rel="stylesheet" type="text/css" href="../index.css">
 </head>
-<body background="../background/dark-honeycomb.png">
+<body background="../background/rubber_grip.png">
 <header><h1><a href="../index.php">Camagru</a><h1>
      </header>
     <section>

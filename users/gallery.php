@@ -9,7 +9,7 @@ session_start();
     <title>Camagru - Home</title>
     <link rel="stylesheet" type="text/css" href="../index.css">
 </head>
-<body background="../background/dark-honeycomb.png">
+<body background="../background/rubber_grip.png">
 <div>
      <header>
          
